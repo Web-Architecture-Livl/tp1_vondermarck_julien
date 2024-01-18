@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="validation.js"></script>
+    <style type="text/tailwindcss">
+        @layer components {
+          input, select {
+            @apply block w-full py-2 px-3 border border-gray-300 rounded-md;
+          }
+          label {
+            @apply block text-sm font-medium text-gray-700;
+          }
+        }
+    </style>
+    <title>Register to CNAM</title>
+</head>
+<body class="bg-gray-100">
+    <main class="max-w-lg mx-auto mt-10 p-6 bg-white rounded-xl shadow-md">
+        <section id="register-section">
+            <h1 class="text-4xl font-bold mb-6 text-center">Register to CNAM</h1>
+            <form class="space-y-4">
+                <div>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName"  placeholder="Julien">
+                </div>
+                
+                <div>
+                    <label for="lastName" >Last Name:</label>
+                    <input type="text" id="lastName" name="lastName"  placeholder="Von Der Flucht">
+                </div>
+
+                <div>
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address"  placeholder="Rue de Lidl">
+                </div>
+                
+                <div>
+                    <label for="postalCode">Postal Code:</label>
+                    <input type="text" id="postalCode" name="postalCode"  placeholder="67000">
+                </div>
+                
+                <div>
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city"  placeholder="Strasbourg">
+                </div>
+                
+                <div>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone"  placeholder="0646754480">
+                </div>
+                
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"  placeholder="jesuisuncheninpan@lol.fr">
+                </div>
+                
+                <div>
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" >
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username"  placeholder="celibdu67">
+                </div>
+
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required >
+                </div>
+
+                <div>
+                    <label for="confirmPassword">Password Confirmation:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+
+                <div id="error-div" class="bg-red-400 p-5 border rounded-md text-white" style="display: none;">
+                    <p class="font-bold">Oops error...</p>
+                    <ul id="error-list"></ul>
+                </div>
+
+                <button type="submit" class="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Submit</button>
+            </form>
+        </section>
+
+        <section id="success-section" style="display: none;">
+            <h1 class="text-4xl font-bold mb-6 text-center text-green-300">Success</h1>
+            <p class="text-center">You have been registered to CNAM</p>
+            <button id="go-back" class="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 mt-5">Go back</button>
+        </section>
+    </main>
+
+    <footer class="mt-10 p-5 text-center bg-gray-300">
+        <p class="text-sm text-gray-500">Julien Von Der Marck - TP1</p>
+    </footer>
+</body>
+</html>
